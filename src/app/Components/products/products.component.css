@@ -1,0 +1,18 @@
+.product {
+  min-width: 250px;
+  height: 330px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px #ddd;
+}
+
+.stock {
+  background-color: #ddd;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.btn {
+  text-transform: capitalize;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
