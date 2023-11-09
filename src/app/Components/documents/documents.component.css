@@ -1,0 +1,32 @@
+.document {
+  min-width: 200px;
+  max-width: 20%;
+  max-height: 300px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px #ddd;
+  transition: 0.5s;
+}
+
+.document:hover {
+  box-shadow: 0 0 10px 10px #ddd;
+}
+
+.document .icon {
+  color: #5453ca;
+  font-size: 70px;
+}
+
+.btn {
+  text-transform: capitalize;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+@media (max-width: 767px) {
+  .document {
+    min-width: calc(50% - 1rem);
+  }
+  .btn {
+    width: 60% !important;
+  }
+}

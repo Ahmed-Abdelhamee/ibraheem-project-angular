@@ -1,19 +1,41 @@
-<app-banner></app-banner>
-
-<section class="section container d-flex">
-  <div class="product rounded-4 p-2 d-flex flex-column">
-    <figure class="d-flex justify-content-center mb-0">
-      <img
-        src="assets/1-HP Probook 450 G9 - Intel® Core™ i5-1235U -.jpg"
-        width="150"
-        class="mw-100"
-      />
-    </figure>
-    <h5 class="card-title mb-2 text-center">Card title</h5>
-    <div class="card-text mb-1 mt-auto d-flex justify-content-around">
-      <span class="text-primary fw-bold">{{ "676" | currency }}</span>
-      <span class="stock fw-bold">5</span>
+<!-- banner -->
+<div class="bg-cover overlay">
+  <div class="container section">
+    <div class="row">
+      <div class="col-lg-8 text-center mx-auto">
+        <div class="content">
+          <h1 class="text-white mb-3">Our Products</h1>
+          <p class="text-white mb-4">
+            Here are our products, search for what you want 😃
+          </p>
+        </div>
+      </div>
     </div>
-    <button href="" class="btn px-2 py-2 rounded-1 w-25 mx-auto">Buy</button>
+  </div>
+</div>
+<!-- /banner -->
+
+<section
+  class="section container d-flex gap-3 flex-wrap flex-column flex-md-row"
+>
+  <div
+    class="product rounded-4 p-2 d-flex flex-column"
+    *ngFor="let prod of products"
+  >
+    <figure class="d-flex justify-content-center">
+      <img [src]="prod.imageBase64" width="150" class="mw-100" />
+    </figure>
+    <h5 class="card-title mb-2 text-center">{{ prod.name }}</h5>
+    <div class="card-text mb-1 mt-auto mb-3 d-flex justify-content-around">
+      <span class="text-primary fw-bold">{{ prod.price | currency }}</span>
+      <span class="stock fw-bold">{{ prod.stock }}</span>
+    </div>
+    <button
+      href=""
+      class="btn px-2 py-2 rounded-1 w-25 mx-auto"
+      [disabled]="prod.stock == 0"
+    >
+      Buy
+    </button>
   </div>
 </section>

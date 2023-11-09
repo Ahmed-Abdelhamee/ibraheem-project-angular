@@ -1,1 +1,34 @@
-<p>documents works!</p>
+<!-- banner -->
+<div class="bg-cover overlay">
+  <div class="container section">
+    <div class="row">
+      <div class="col-lg-8 text-center mx-auto">
+        <div class="content">
+          <h1 class="text-white mb-3">Our Documents</h1>
+          <p class="text-white mb-4">
+            Here are our documents, search for what you want and download it 👍
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /banner -->
+
+<section class="section container d-flex gap-3 flex-wrap flex-row">
+  <div
+    class="document rounded-4 p-2 d-flex flex-column"
+    *ngFor="let file of files"
+  >
+    <i class="fa-solid fa-file-arrow-down icon my-4 mx-auto"></i>
+    <h5 class="card-title mb-3 mt-auto text-center">{{ file.name }}</h5>
+    <span class="size my-2 fw-bold text-center">{{ file.size }}</span>
+    <button
+      href=""
+      class="btn px-2 py-2 rounded-1 w-50 mx-auto"
+      (click)="doanload(file.id)"
+    >
+      Download
+    </button>
+  </div>
+</section>
