@@ -12,6 +12,7 @@ import { ProductsComponent } from './Components/products/products.component';
 import { NotFoundComponent } from './Components/not-found/not-found.component';
 import { DocumentsComponent } from './Components/documents/documents.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SizeReaderPipe } from './Pipes/size-reader.pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsComponent,
     NotFoundComponent,
     DocumentsComponent,
+    SizeReaderPipe,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],
