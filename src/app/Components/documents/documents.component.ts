@@ -35,18 +35,6 @@ export class DocumentsComponent implements OnInit {
     const contentDispositionHeader = response.headers.get(
       'content-disposition'
     );
-    // const matches = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/.exec(
-    //   contentDispositionHeader as string
-    // );
-    // console.log(
-    //   contentDispositionHeader?.split(';')[1].split('=')[1].replaceAll('"', '')
-    // );
-    // if (matches != null && matches[1]) {
-    //   return matches[1].replace(/['"]/g, '');
-    // } else {
-    //   return 'file';
-    // }
-    // return matches && matches[1] ? matches[1].replace(/['"]/g, '') : 'file';
     const fileName = contentDispositionHeader
       ?.split(';')[1]
       .split('=')[1]
